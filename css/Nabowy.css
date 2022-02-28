@@ -1,0 +1,495 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Cairo', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+}
+ .space-between {
+     display: flex;
+     justify-content: space-between;
+ }
+ .repeat {
+    background-size: cover;
+    background-repeat: no-repeat;
+ }
+ button {
+    background-color: var(--main-color);
+    padding: 7px 20px;
+    border: 1px solid;
+    border-color: transparent;
+    outline: none;
+    border-radius: 7px;
+    transition: var(--main-transtion);
+}
+ button a {
+    color: white;
+    font-weight: bold;
+    font-style: oblique;
+ }
+ button:hover {
+    background-color: transparent;
+    border-color: var(--main-color);
+}
+ button i {
+    margin: 0 5px;
+}
+.Seconed-Button {
+    background-color: transparent;
+    border: 1px solid white;
+}
+.Seconed-Button a {
+    color: white;
+}
+.Seconed-Button:hover {
+    background-color: white;
+}
+.Seconed-Button:hover a {
+    color: black;
+}
+:root {
+    --main-transtion:all 0.5s ease;
+    --main-color: #8a0e10;
+}
+    .container {
+        padding: 0 10px;
+        margin: 0 auto;
+    }
+/* Start Madia  */
+@media (min-width:768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media (min-width:992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media (min-width:1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+/* End Madia  */
+.Background-of-imge {
+    background-image: url(../photos/banner_home.webp);
+    background-position: center;
+}
+header {
+    height: 100px;
+    padding: 10px 0;
+}
+header .container {
+    align-items: center;
+    flex-wrap: wrap;
+}
+header .container .imge {
+    flex-basis: 210px;
+}
+header .container .sign {
+    flex-basis: 120px;
+}
+header .container .links {
+    flex-basis: calc(100% - 380px);
+    display: flex;
+    justify-content: flex-end;
+}
+header .container .links  li a  {
+    display: block;
+    padding: 5px 15px;
+    color: white;
+    position: relative;
+    transition: var(--main-transtion);
+    font-weight: bold;
+}
+header .container .links  li a::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: var(--main-color);
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 0);
+    transition: var(--main-transtion);
+}
+header .container .links  li a:hover {
+    color: var(--main-color);
+}
+header .container .links  li a:hover::after {
+    width: 100%;
+}
+@media (max-width:1199px) {
+    header .container .logo {
+        flex-basis: 100%;
+        display: flex;
+        margin-bottom: 10px;
+        justify-content: center;
+    }
+    header .container .links {
+        flex-basis: calc(100% - 150px);
+        justify-content: flex-start;
+    }
+}
+@media (max-width:991px) {
+    header .container .links {
+        flex-basis: calc(100% - 120px);
+    }
+    header .container .links li a {
+        padding: 5px 10px;
+    }
+}
+@media (max-width:767px) {
+    header {
+        height: 400px;
+    }
+    header .container .links {
+        flex-basis: 100%;
+        flex-direction: column;
+    }
+    header .container .links li a {
+        width: fit-content;
+        margin: 10px auto;
+    }
+    header .container .sign {
+        flex-basis: 100%;
+        text-align: center;
+    }
+}
+section {
+    padding: 100px 0;
+}
+section > .container {
+    padding: 100px 0;
+}
+section .container .text {
+    flex-basis: 45%;
+}
+section .container .text h2 {
+    font-size: 60px;
+    margin-bottom: 10px;
+    color: var(--main-color);
+    word-spacing: -5px;
+}
+section .container .text p {
+    line-height: 1.8;
+    color: white;
+    font-style: 18px;
+    margin: 10px 0;
+    position: relative;
+}
+section .container .text .star::after {
+    content: "*";
+    color: var(--main-color);
+    position: absolute;
+    left: -15px;
+    font-size: 30px;
+    top: -7px;
+}
+section .container .text button {
+    padding: 10px 20px;
+}
+section .container .right {
+    flex-basis: 200px;
+    line-height: 1.6;
+    color: white;
+    font-size: 12px;
+}
+section .container .right img {
+    margin: 10px 0;
+}
+@media (max-width:767px) {
+    section .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    section .container .text {
+        flex-basis: 100%;
+    }
+    section .container .text h2 {
+        font-size: 40px;
+    }
+    section .container .text p:last-of-type {
+        width: fit-content;
+        margin: 10px auto;
+    }
+}
+section .blackSection {
+    background-color: black;
+    padding:30px 0 ;
+}
+section .blackSection .container .Games {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+}
+section .blackSection .container .box img {
+    max-width: 100%;
+}
+section .blackSection .container .Check-out {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section .blackSection .container .Check-out h3 {
+    font-weight: 600;
+    color: white;
+    margin-right: 20px;
+}
+.Features {
+    padding: 30px 0 150px 0 ;
+    background-image: url(../photos/background\ of\ landing.webp);
+    background-position: center;
+}
+
+.Features .container video {
+    flex-basis: 650px;
+    max-width: 100%;
+    height: 320px;
+}
+.Features .container .Our-Features {
+    flex-basis: calc(100% - 650px);
+}
+.Features .container .Our-Features h2,
+.Features .container .Our-Features h4 {
+    color: var(--main-color);
+    margin-bottom: 10px;
+}
+.Features .container .Our-Features .box {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+}
+.Features .container .Our-Features .box .imge {
+    flex-basis: 80px;
+}
+.Features .container .Our-Features .box .imge img {
+    max-width: 100%;
+}
+.Features .container .Our-Features .box .text {
+    flex-basis: calc(95% - 80px);
+}
+.Features .container .Our-Features .box .text p {
+    line-height: 1.6;
+    color: white;
+    font-size: 15px;
+}
+@media (max-width:1199px) {
+    .Features .container {
+        flex-direction: column;
+    }
+    .Features .container video {
+        flex-basis: 100%;
+        width: 650px;
+        margin: 20px auto;
+    }
+    .Features .container .Our-Features {
+        flex-basis: 100%;
+    }
+    .Features .container .Our-Features .box {
+        flex-direction: column;
+        text-align: center;
+    }
+    .Features .container .Our-Features h2,
+    .Features .container .Our-Features .Seconed-Button {
+        margin: 20px auto;
+        width: fit-content;
+        display: block;
+    }
+}
+.Landing {
+    padding: 67px 0 ;
+    background-image: url(../photos/players.webp);
+    background-position: center ;
+    position: relative;
+}
+.Landing .container .text {
+    max-width: 500px;
+    color: red;
+}
+.Landing .container .text h2 {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+.Landing .container .Players {
+    position: absolute;
+    max-width: 200px;
+    font-size: 13px;
+    font-weight: normal;
+    right: 30px;
+    bottom: 50px;
+    color: white;
+}
+@media (max-width:991px) {
+    .Landing .container .text {
+        max-width: 100%;
+        text-align: center;
+    }
+    .Landing .container .text h2 {
+        margin: 20px 0;
+    }
+}
+@media (max-width:767px) {
+    .Landing .container .Players {
+        display: none;
+    }
+}
+footer {
+    background-color: black;
+    padding: 50px 0 10px 0 ;
+    position: relative;
+}
+footer .imge {
+    width: 70px;
+    position: absolute;
+    top: 80px;
+}
+footer .imge img {
+    width: 45px;
+    height: 65px;
+}
+footer .links {
+    padding-left: 90px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+footer .links .box h3 {
+    color: var(--main-color);
+    margin: 20px 0;
+}
+footer .links .box .list li a {
+    display: block;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    width: fit-content;
+    transition: var(--main-transtion);
+}
+footer .links .box .list li a:hover {
+    color: var(--main-color);
+    text-decoration: underline;
+}
+footer .links .box.end {
+    display: flex;
+    justify-content: space-evenly;
+}
+footer .links .box.end .Frist-icone,
+footer .links .box.end .Seconed-icone {
+    display: flex;
+    flex-direction: column;
+}
+footer .links .box.end .Frist-icone i,
+footer .links .box.end .Seconed-icone i {
+    margin-bottom: 20px;
+    color: white;
+    transition: var(--main-transtion);
+}
+footer .links .box.end .Frist-icone a ,
+footer .links .box.end .Seconed-icone a {
+    display: block;
+}
+footer .links .box.end .Frist-icone a:hover i.fa-facebook-f {
+    color: #0f8ff2;
+}
+footer .links .box.end .Frist-icone a:hover i.fa-twitter {
+    color: #5da9dd;
+}
+footer .links .box.end .Frist-icone i.fa-youtube:hover {
+    color: red;
+}
+footer .links .box.end .Frist-icone i.fa-tiktok:hover {
+    color: red;
+}
+footer .links .box.end .Seconed-icone i.fa-instagram:hover {
+    color: #c52eb6;
+}
+footer .links .box.end .Seconed-icone i.fa-linkedin:hover {
+    color: #0270ad;
+}
+footer .links .box.end .Seconed-icone i.fa-discord:hover {
+    color: #5865f2;
+}
+
+footer .Cookies .text {
+    flex-basis: 70%;
+}
+footer .Cookies .text p {
+    color: white;
+    opacity: 0.9;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+footer .Cookies .text h3 {
+    color: white;
+    font-weight: 600;
+    line-height: 1.6;
+    font-size: 18px;
+}
+footer .Cookies .text a {
+    color: var(--main-color);
+    transition: var(--main-transtion);
+    font-weight: normal;
+}
+footer .Cookies .text a:hover {
+    text-decoration: underline;
+}
+footer .Cookies .Privacy {
+    flex-basis: 25%;
+}
+footer .Cookies .Privacy .top {
+    color: white;
+    margin-bottom: 20px;
+}
+footer .Cookies .Privacy .top a {
+    color: #777;
+    font-size: 13px;
+    transition: var(--main-transtion);
+}
+footer .Cookies .Privacy .top a:hover {
+    text-decoration: underline;
+    color: var(--main-color);
+}
+footer .Cookies .Privacy  button {
+    margin: 10px auto;
+    display: block;
+    text-align: center;
+}
+@media (max-width:767px) {
+    footer .links {
+        text-align: center;
+        margin-bottom: 20px;
+        padding-left: 0;
+    }
+    footer .links .box .list li a {
+        width: 100%;
+    }
+    footer .imge {
+        display: block;
+        margin:  10px auto;
+        top: 0;
+        position: relative;
+    }
+    footer .Cookies {
+        flex-direction: column;
+    }
+    footer .Cookies .text {
+        flex-basis: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
