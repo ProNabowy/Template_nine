@@ -12,6 +12,23 @@ body {
   font-family: "Cairo", sans-serif;
   font-family: "Open Sans", sans-serif;
 }
+:root {
+  --main-transtion: all 0.5s ease;
+  --main-color: #8a0e10;
+  --white-color: white;
+  --black-color: black;
+  --main-margin: 20px;
+  --main-padding: 20px;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background-color: black;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);
+}
 .space-between {
   display: flex;
   justify-content: space-between;
@@ -22,15 +39,16 @@ body {
 }
 button {
   background-color: var(--main-color);
-  padding: 7px 20px;
+  padding: 7px var(--main-padding);
   border: 1px solid;
   border-color: transparent;
   outline: none;
   border-radius: 7px;
   transition: var(--main-transtion);
+  cursor: pointer;
 }
 button a {
-  color: white;
+  color: var(--white-color);
   font-weight: bold;
   font-style: oblique;
 }
@@ -43,23 +61,19 @@ button i {
 }
 .Seconed-Button {
   background-color: transparent;
-  border: 1px solid white;
+  border: 1px solid var(--white-color);
 }
 .Seconed-Button a {
-  color: white;
+  color: var(--white-color);
 }
 .Seconed-Button:hover {
-  background-color: white;
+  background-color: var(--white-color);
 }
 .Seconed-Button:hover a {
-  color: black;
-}
-:root {
-  --main-transtion: all 0.5s ease;
-  --main-color: #8a0e10;
+  color: var(--black-color);
 }
 .container {
-  padding: 0 10px;
+  padding: 0 calc(var(--main-padding) - 10px);
   margin: 0 auto;
 }
 /* Start Madia  */
@@ -87,7 +101,7 @@ button i {
 }
 header {
   height: 100px;
-  padding: 10px 0;
+  padding: calc(var(--main-padding) - 10px) 0;
 }
 header .container {
   align-items: center;
@@ -106,8 +120,8 @@ header .container .links {
 }
 header .container .links li a {
   display: block;
-  padding: 5px 15px;
-  color: white;
+  padding: calc(var(--main-padding) - 5px) calc(var(--main-padding) - 15px);
+  color: var(--white-color);
   position: relative;
   transition: var(--main-transtion);
   font-weight: bold;
@@ -133,7 +147,7 @@ header .container .links li a:hover::after {
   header .container .logo {
     flex-basis: 100%;
     display: flex;
-    margin-bottom: 10px;
+    margin-bottom: calc(var(--main-margin) - 10px);
     justify-content: center;
   }
   header .container .links {
@@ -146,7 +160,7 @@ header .container .links li a:hover::after {
     flex-basis: calc(100% - 120px);
   }
   header .container .links li a {
-    padding: 5px 10px;
+    padding: calc(var(--main-padding) - 5px) calc(var(--main-padding) - 10px);
     font-size: 14px;
   }
 }
@@ -160,7 +174,7 @@ header .container .links li a:hover::after {
   }
   header .container .links li a {
     width: fit-content;
-    margin: 10px auto;
+    margin: calc(var(--main-margin) - 10px) auto;
   }
   header .container .sign {
     flex-basis: 100%;
@@ -178,15 +192,15 @@ section .container .text {
 }
 section .container .text h2 {
   font-size: 60px;
-  margin-bottom: 10px;
+  margin-bottom: calc(var(--main-margin) - 10px);
   color: var(--main-color);
   word-spacing: -5px;
 }
 section .container .text p {
   line-height: 1.8;
-  color: white;
+  color: var(--white-color);
   font-style: 18px;
-  margin: 10px 0;
+  margin: calc(var(--main-margin) - 10px) 0;
   position: relative;
 }
 section .container .text .star::after {
@@ -198,16 +212,16 @@ section .container .text .star::after {
   top: -7px;
 }
 section .container .text button {
-  padding: 10px 20px;
+  padding: calc(var(--main-padding) - 10px) var(--main-padding);
 }
 section .container .right {
   flex-basis: 200px;
   line-height: 1.6;
-  color: white;
+  color: var(--white-color);
   font-size: 12px;
 }
 section .container .right img {
-  margin: 10px 0;
+  margin: calc(var(--main-margin) - 10px) 0;
 }
 @media (max-width: 767px) {
   section .container {
@@ -222,12 +236,12 @@ section .container .right img {
   }
   section .container .text p:last-of-type {
     width: fit-content;
-    margin: 10px auto;
+    margin: calc(var(--main-margin) - 10px) auto;
   }
 }
 section .blackSection {
-  background-color: black;
-  padding: 30px 0;
+  background-color: var(--black-color);
+  padding: calc(var(--main-padding) + 10px) 0;
 }
 section .blackSection .container .Games {
   display: grid;
@@ -238,18 +252,18 @@ section .blackSection .container .box img {
   max-width: 100%;
 }
 section .blackSection .container .Check-out {
-  margin: 20px 0;
+  margin: var(--main-margin) 0;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 section .blackSection .container .Check-out h3 {
   font-weight: 600;
-  color: white;
-  margin-right: 20px;
+  color: var(--white-color);
+  margin-right: var(--main-margin);
 }
 .Features {
-  padding: 30px 0 150px 0;
+  padding: calc(var(--main-padding) + 10px) 0 150px 0;
   background-image: url(../photos/background\ of\ landing.webp);
   background-position: center;
 }
@@ -265,10 +279,10 @@ section .blackSection .container .Check-out h3 {
 .Features .container .Our-Features h2,
 .Features .container .Our-Features h4 {
   color: var(--main-color);
-  margin-bottom: 10px;
+  margin-bottom: calc(var(--main-margin) - 10px);
 }
 .Features .container .Our-Features .box {
-  margin-bottom: 20px;
+  margin-bottom: var(--main-margin);
   display: flex;
   justify-content: space-between;
   align-content: center;
@@ -285,7 +299,7 @@ section .blackSection .container .Check-out h3 {
 }
 .Features .container .Our-Features .box .text p {
   line-height: 1.6;
-  color: white;
+  color: var(--white-color);
   font-size: 15px;
 }
 @media (max-width: 1199px) {
@@ -295,7 +309,7 @@ section .blackSection .container .Check-out h3 {
   .Features .container video {
     flex-basis: 100%;
     width: 650px;
-    margin: 20px auto;
+    margin: var(--main-margin) auto;
   }
   .Features .container .Our-Features {
     flex-basis: 100%;
@@ -306,7 +320,7 @@ section .blackSection .container .Check-out h3 {
   }
   .Features .container .Our-Features h2,
   .Features .container .Our-Features .Seconed-Button {
-    margin: 20px auto;
+    margin: var(--main-margin) auto;
     width: fit-content;
     display: block;
   }
@@ -323,7 +337,7 @@ section .blackSection .container .Check-out h3 {
 }
 .Landing .container .text h2 {
   font-size: 60px;
-  margin-bottom: 20px;
+  margin-bottom: var(--main-margin);
 }
 .Landing .container .Players {
   position: absolute;
@@ -332,7 +346,7 @@ section .blackSection .container .Check-out h3 {
   font-weight: normal;
   right: 30px;
   bottom: 50px;
-  color: white;
+  color: var(--white-color);
 }
 @media (max-width: 991px) {
   .Landing .container .text {
@@ -340,7 +354,7 @@ section .blackSection .container .Check-out h3 {
     text-align: center;
   }
   .Landing .container .text h2 {
-    margin: 20px 0;
+    margin: var(--main-margin) 0;
   }
 }
 @media (max-width: 767px) {
@@ -350,11 +364,11 @@ section .blackSection .container .Check-out h3 {
   .Landing .container .text h2 {
     font-size: 40px;
     max-width: 90%;
-    margin: 10px auto;
+    margin: calc(var(--main-margin) - 10px) auto;
   }
 }
 footer {
-  background-color: black;
+  background-color: var(--black-color);
   padding: 50px 0 10px 0;
   position: relative;
 }
@@ -375,14 +389,14 @@ footer .links {
 }
 footer .links .box h3 {
   color: var(--main-color);
-  margin: 20px 0;
+  margin: var(--main-margin) 0;
 }
 footer .links .box .list li a {
   display: block;
-  color: white;
+  color: var(--white-color);
   font-size: 16px;
   font-weight: 600;
-  margin-bottom: 20px;
+  margin-bottom: var(--main-margin);
   width: fit-content;
   transition: var(--main-transtion);
 }
@@ -401,8 +415,8 @@ footer .links .box.end .Seconed-icone {
 }
 footer .links .box.end .Frist-icone i,
 footer .links .box.end .Seconed-icone i {
-  margin-bottom: 20px;
-  color: white;
+  margin-bottom: var(--main-margin);
+  color: var(--white-color);
   transition: var(--main-transtion);
 }
 footer .links .box.end .Frist-icone a,
@@ -435,13 +449,13 @@ footer .Cookies .text {
   flex-basis: 70%;
 }
 footer .Cookies .text p {
-  color: white;
+  color: var(--white-color);
   opacity: 0.9;
-  margin-bottom: 20px;
+  margin-bottom: var(--main-margin);
   font-size: 14px;
 }
 footer .Cookies .text h3 {
-  color: white;
+  color: var(--white-color);
   font-weight: 600;
   line-height: 1.6;
   font-size: 18px;
@@ -458,8 +472,8 @@ footer .Cookies .Privacy {
   flex-basis: 25%;
 }
 footer .Cookies .Privacy .top {
-  color: white;
-  margin-bottom: 20px;
+  color: var(--white-color);
+  margin-bottom: var(--main-margin);
 }
 footer .Cookies .Privacy .top a {
   color: #777;
@@ -471,14 +485,14 @@ footer .Cookies .Privacy .top a:hover {
   color: var(--main-color);
 }
 footer .Cookies .Privacy button {
-  margin: 10px auto;
+  margin: calc(var(--main-margin) - 10px) auto;
   display: block;
   text-align: center;
 }
 @media (max-width: 767px) {
   footer .links {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: var(--main-margin);
     padding-left: 0;
   }
   footer .links .box .list li a {
@@ -486,7 +500,7 @@ footer .Cookies .Privacy button {
   }
   footer .imge {
     display: block;
-    margin: 10px auto;
+    margin: calc(var(--main-margin) - 10px) auto;
     top: 0;
     position: relative;
   }
@@ -496,6 +510,6 @@ footer .Cookies .Privacy button {
   footer .Cookies .text {
     flex-basis: 100%;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: var(--main-margin);
   }
 }
